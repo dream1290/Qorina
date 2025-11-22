@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { QRCodeCanvas, QRCodeSVG } from 'qrcode.react';
 import { Copy, Download, RotateCcw, Sparkles, QrCode, CheckCircle } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Home() {
   const [url, setUrl] = useState('');
@@ -145,7 +146,13 @@ export default function Home() {
                 transition={{ delay: 0.4, type: "spring", stiffness: 300, damping: 15 }}
                 className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6"
               >
-                <QrCode className="text-white w-8 h-8" />
+                <Image 
+                  src="/logo.png" 
+                  alt="QR Code Generator Logo" 
+                  width={40} 
+                  height={40} 
+                  className="text-white"
+                />
               </motion.div>
               
               <motion.h2
@@ -185,7 +192,13 @@ export default function Home() {
       <div className="w-full max-w-2xl bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl overflow-hidden border border-white z-10">
         <div className="bg-gradient-to-r from-indigo-600 to-purple-700 p-6 text-white text-center relative">
           <div className="absolute top-4 right-4">
-            <Sparkles className="w-6 h-6 opacity-80" />
+            <Image 
+              src="/logo.png" 
+              alt="QR Code Generator Logo" 
+              width={24} 
+              height={24} 
+              className="opacity-80"
+            />
           </div>
           <h1 className="text-3xl font-bold mb-2">QR Code Generator</h1>
           <p className="opacity-90">Create beautiful, permanent QR codes instantly</p>

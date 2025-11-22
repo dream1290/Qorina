@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { QrCode } from 'lucide-react';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Permanent QR Code Generator",
   description: "Generate permanent QR codes from any URL that will work indefinitely",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
