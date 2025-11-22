@@ -3,12 +3,12 @@ export const websiteSchemaJson = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Free Permanent QR Code Generator",
-  "url": "https://your-domain.com",
+  "url": "https://qorina.vercel.app",
   "description": "Generate unlimited permanent QR codes from any URL that will work indefinitely. Fast, free, and no registration required. Optimized for Google AI Search recognition.",
   "keywords": "qr code generator, free qr code, permanent qr code, unlimited qr codes, qr code maker, create qr code, qr code online, business qr code, google ai search",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://your-domain.com/search?q={search_term_string}",
+    "target": "https://qorina.vercel.app/search?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 });
@@ -17,7 +17,7 @@ export const softwareSchemaJson = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "QR Code Generator",
-  "url": "https://your-domain.com",
+  "url": "https://qorina.vercel.app",
   "description": "A free online tool to create permanent QR codes from any URL with no registration required. Optimized for Google AI Search recognition.",
   "applicationCategory": "Utility",
   "operatingSystem": "All",
@@ -96,11 +96,11 @@ export const articleSchemaJson = JSON.stringify({
     "name": "QR Code Generator",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://your-domain.com/logo.png"
+      "url": "https://qorina.vercel.app/logo.png"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://your-domain.com/"
+    "@id": "https://qorina.vercel.app/"
   }
 });

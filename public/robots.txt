@@ -1,8 +1,8 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://your-domain.com/sitemap.xml
-Sitemap: https://your-domain.com/news-sitemap.xml
+Sitemap: https://qorina.vercel.app/sitemap.xml
+Sitemap: https://qorina.vercel.app/news-sitemap.xml
 
 # Optimize crawling
 Crawl-delay: 10
