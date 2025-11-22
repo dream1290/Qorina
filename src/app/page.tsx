@@ -200,8 +200,8 @@ export default function Home() {
               className="opacity-80"
             />
           </div>
-          <h1 className="text-3xl font-bold mb-2">QR Code Generator</h1>
-          <p className="opacity-90">Create beautiful, permanent QR codes instantly</p>
+          <h1 className="text-3xl font-bold mb-2">Free Permanent QR Code Generator</h1>
+          <p className="opacity-90">Create beautiful, permanent QR codes instantly - No Registration Required</p>
         </div>
         
         <div className="p-6 md:p-8">
@@ -227,6 +227,7 @@ export default function Home() {
                         onChange={(e) => setUrl(e.target.value)}
                         placeholder="https://example.com"
                         className="flex-grow px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none transition shadow-sm"
+                        aria-label="Enter URL to generate QR code"
                       />
                       <motion.button
                         type="submit"
@@ -321,11 +322,46 @@ export default function Home() {
                   <div className="inline-block p-4 bg-indigo-100 rounded-full mb-4">
                     <QrCode className="w-12 h-12 text-indigo-600" />
                   </div>
-                  <h3 className="text-xl font-medium text-gray-800 mb-2">How to use</h3>
+                  <h3 className="text-xl font-medium text-gray-800 mb-2">How to use our Free QR Code Generator</h3>
                   <p className="text-gray-600 max-w-md mx-auto">
-                    Enter any valid URL above, choose your preferred format, and click &quot;Generate QR&quot; to create a scannable QR code.
+                    Enter any valid URL above, choose your preferred format, and click &quot;Generate QR&quot; to create a scannable QR code. Our QR codes are permanent and work indefinitely!
                   </p>
                 </motion.div>
+                
+                {/* SEO Content Section */}
+                <div className="mt-10 pt-8 border-t border-gray-200">
+                  <h2 className="text-2xl font-bold text-gray-800 mb-4">Why Choose Our Free QR Code Generator?</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="bg-indigo-50 p-5 rounded-xl">
+                      <h3 className="font-semibold text-lg text-indigo-700 mb-2">Permanent QR Codes</h3>
+                      <p className="text-gray-700">Our QR codes are designed to work forever. No expiration dates or limitations on scans!</p>
+                    </div>
+                    <div className="bg-purple-50 p-5 rounded-xl">
+                      <h3 className="font-semibold text-lg text-purple-700 mb-2">Completely Free</h3>
+                      <p className="text-gray-700">Generate unlimited QR codes with no registration or hidden fees. Just pure functionality!</p>
+                    </div>
+                    <div className="bg-cyan-50 p-5 rounded-xl">
+                      <h3 className="font-semibold text-lg text-cyan-700 mb-2">Multiple Formats</h3>
+                      <p className="text-gray-700">Download your QR codes in PNG or SVG formats for maximum versatility in your projects.</p>
+                    </div>
+                    <div className="bg-pink-50 p-5 rounded-xl">
+                      <h3 className="font-semibold text-lg text-pink-700 mb-2">Fast Generation</h3>
+                      <p className="text-gray-700">Create QR codes instantly with our optimized generator. No waiting, no delays!</p>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-8">
+                    <h3 className="text-xl font-bold text-gray-800 mb-3">Perfect for Businesses and Personal Use</h3>
+                    <p className="text-gray-700 mb-4">
+                      Whether you&#39;re promoting your business, sharing your portfolio, or creating event invitations, our QR code generator 
+                      offers the perfect solution. Create professional QR codes that enhance your marketing efforts and connect with your audience seamlessly.
+                    </p>
+                    <p className="text-gray-700">
+                      With our free service, you can generate unlimited QR codes that work permanently. Unlike other services that expire 
+                      or limit your usage, we believe in providing a reliable tool that grows with your needs.
+                    </p>
+                  </div>
+                </div>
               </motion.div>
             ) : (
               <motion.div
@@ -367,6 +403,7 @@ export default function Home() {
                         whileTap={{ scale: 0.95 }}
                         onClick={copyToClipboard}
                         className="flex-shrink-0 p-2 rounded-md hover:bg-gray-200 transition-colors"
+                        aria-label="Copy URL"
                       >
                         {copied ? (
                           <CheckCircle className="w-5 h-5 text-green-500" />
@@ -408,6 +445,29 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+                
+                {/* Post-generation SEO content */}
+                <div className="mt-8 pt-6 border-t border-gray-200">
+                  <h3 className="text-xl font-bold text-gray-800 mb-3">Maximize Your QR Code Usage</h3>
+                  <p className="text-gray-700 mb-4">
+                    Your permanent QR code has been successfully generated! This QR code will continue to work indefinitely, 
+                    making it perfect for long-term marketing campaigns, business cards, product packaging, and more.
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                    <div className="bg-blue-50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-blue-700">Business Marketing</h4>
+                      <p className="text-sm text-gray-700 mt-1">Add to flyers, posters, and promotional materials to drive traffic to your website.</p>
+                    </div>
+                    <div className="bg-green-50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-green-700">Social Media</h4>
+                      <p className="text-sm text-gray-700 mt-1">Include in print ads to connect offline campaigns with your social profiles.</p>
+                    </div>
+                    <div className="bg-yellow-50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-yellow-700">Events & Networking</h4>
+                      <p className="text-sm text-gray-700 mt-1">Share contact information or event details quickly and efficiently.</p>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             )}
           </AnimatePresence>
@@ -417,6 +477,83 @@ export default function Home() {
           <p>All generated QR codes are permanent and will continue to work indefinitely</p>
         </div>
       </div>
+      
+      {/* FAQ Section for SEO */}
+      <div className="w-full max-w-2xl mt-10 bg-white rounded-2xl shadow-lg p-6">
+        <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          <div>
+            <h3 className="font-semibold text-lg text-gray-800">What is a QR code?</h3>
+            <p className="text-gray-600 mt-1">
+              A QR code (Quick Response code) is a type of barcode that can be scanned by smartphones and other devices to quickly 
+              access information such as websites, contact details, or other digital content.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-lg text-gray-800">Are your QR codes really permanent?</h3>
+            <p className="text-gray-600 mt-1">
+              Yes! Our QR codes are designed to work indefinitely. Once generated, they will continue to function without expiration dates or scan limits.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-lg text-gray-800">Do I need to register to use your service?</h3>
+            <p className="text-gray-600 mt-1">
+              No registration is required. Our QR code generator is completely free to use with no signup process needed. Simply enter your URL and generate your QR code instantly.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-lg text-gray-800">Can I use the generated QR codes commercially?</h3>
+            <p className="text-gray-600 mt-1">
+              Absolutely! Our QR codes can be used for both personal and commercial purposes without any restrictions.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      {/* FAQ Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is a QR code?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A QR code (Quick Response code) is a type of barcode that can be scanned by smartphones and other devices to quickly access information such as websites, contact details, or other digital content."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are your QR codes really permanent?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes! Our QR codes are designed to work indefinitely. Once generated, they will continue to function without expiration dates or scan limits."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need to register to use your service?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No registration is required. Our QR code generator is completely free to use with no signup process needed. Simply enter your URL and generate your QR code instantly."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I use the generated QR codes commercially?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Absolutely! Our QR codes can be used for both personal and commercial purposes without any restrictions."
+                }
+              }
+            ]
+          })
+        }}
+      />
       
       {/* Custom styles for animations */}
       <style jsx>{`
